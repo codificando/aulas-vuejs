@@ -1,6 +1,6 @@
 # mini-ecommerce-webschool
 
-> Mini ecommerce com aulas do webschool desenvolvido com vue.js
+> Mini ecommerce desenvolvido sob as aulas do webschool
 
 ## Build Setup
 
