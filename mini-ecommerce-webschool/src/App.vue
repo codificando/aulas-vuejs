@@ -1,15 +1,15 @@
 <template>
-  <HelloWorld/>
+  <div class="phone-viewport">
+    <md-toolbar>
+      <h1 class="md-title">E-commerce Webschool</h1>
+    </md-toolbar>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
+  name: 'app'
 }
 </script>
 
