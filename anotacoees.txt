@@ -1,0 +1,3 @@
+Data binding = Deixar o HTML dinâmico
+Interpolação = {{ }} imprimir objeto
+Propety bindgin = Alterar valor de um elemento/atributo HMTL, utilizando a segunite nomenclatura: v-bind:href="link" OU :href="link"
