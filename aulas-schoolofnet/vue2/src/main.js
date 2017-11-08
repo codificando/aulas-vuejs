@@ -1,7 +1,12 @@
 import Vue from 'vue'
-import App from './App.vue'
+// import App from './App.vue'
+
+import {Time} from './time'
 
 new Vue({
   el: '#app',
-  render: h => h(App)
+  data: {
+    time: new Time('Time x' , 'escudo')
+  }
+  // render: h => h(App)
 })
