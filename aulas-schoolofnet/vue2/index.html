@@ -6,8 +6,28 @@
   </head>
   <body>
     <div id="app">
-    	{{time.nome}}
-    	<img :src="time.escudo" />
+    	<h3>Times</h3>
+    	<ul>
+    		<li v-for="(time, index) in times">
+    			{{index}}
+    			{{time.nome}}
+    			<img :src="time.escudo" />
+    		</li>
+    	</ul>
+    	<br/><br/>
+    	
+    	<h3>Indices</h3>
+    	<ul>
+    		<li v-for="x in 3">{{x}}</li>
+    	</ul>
+    	<br/><br/>
+
+    	<h3>Alfabeto</h3>
+    	<ul>
+    		<li v-for="(valor, chave, index) in alfabeto">
+    			{{ index }} - {{ chave }} : {{ valor }}
+    		</li>
+    	</ul>
     </div>
     <script src="/dist/build.js"></script>
   </body>
