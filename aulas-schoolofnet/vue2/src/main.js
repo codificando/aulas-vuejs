@@ -6,7 +6,7 @@ import {Time} from './time'
 new Vue({
   el: '#app',
   data: {
-    time: new Time('Time x' , 'escudo')
+    time: new Time('America MG' , require('./assets/america_mg_60x60.png'))
   }
   // render: h => h(App)
 })
