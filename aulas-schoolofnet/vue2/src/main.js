@@ -1,7 +1,10 @@
 import Vue from 'vue'
 // import App from './App.vue'
 
-import {Time} from './time'
+import {Time} from './time';
+
+require('style!css!bootstrap/dist/css/bootstrap.min.css');
+require('bootstrap');
 
 new Vue({
   el: '#app',

@@ -35,6 +35,10 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.(woff|woff2|toff|svg|eot$)/,
+        loader: 'url'
       }
     ]
   },
