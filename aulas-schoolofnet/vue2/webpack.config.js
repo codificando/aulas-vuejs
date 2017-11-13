@@ -12,7 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: 'vue',
         options: {
           loaders: {
             // Since sass-loader (weirdly) has SCSS as its default parse mode, we map
@@ -37,11 +37,16 @@ module.exports = {
         }
       },
       {
-        test: /\.(woff|woff2|toff|svg|eot$)/,
-        loader: 'url'
+        test: /\.(woff|woff2|ttf|svg|eot)$/,
+        loader: 'url-loader'
       }
     ]
   },
+  plugins: [
+      new webpack.ProvidePlugin({
+        'jQuery': 'jquery'
+      })
+  ],
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'

@@ -3,7 +3,7 @@ import Vue from 'vue'
 
 import {Time} from './time';
 
-require('style!css!bootstrap/dist/css/bootstrap.min.css');
+require('style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css');
 require('bootstrap');
 
 new Vue({
