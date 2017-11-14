@@ -33,6 +33,26 @@
     			</tbody>
     		</table>
     	</div>
+    	<div class="row">
+    		<form action="" class="form-line">
+    			<div class="form-group">
+    				<input type="text" name="" class="form-control">
+    				<label for="" class="control-label">
+    					{{ novoJogo.casa.time.nome }}
+    					<img :src="novoJogo.casa.time.escudo" style="width: 30px; width: 30px;" />
+    				</label> 
+    			</div>
+    			<span>X</span>
+    			<div class="form-group">
+    				<label for="" class="control-label">
+    					<img :src="novoJogo.fora.time.escudo" style="width: 30px; width: 30px;" />
+    					{{ novoJogo.fora.time.nome }}
+    				</label> 
+    				<input type="text" name="" class="form-control">
+    			</div>
+    			<button type="button" class="btn btn-primary">Fim de jogo</button>
+    		</form>
+     	</div>
     </div>
     <script src="/dist/build.js"></script>
   </body>
