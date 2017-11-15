@@ -1,3 +1,11 @@
 Data binding = Deixar o HTML dinâmico
+
 Interpolação = {{ }} imprimir objeto
+
 Propety bindgin = Alterar valor de um elemento/atributo HMTL, utilizando a segunite nomenclatura: v-bind:href="link" OU :href="link"
+
+One-way data binding = Utilização de modelo de dados na view. Em uma linguagem mais simples podemos dizer: um caminho para ligação de dados.
+
+Two-way data binging = Significa que a view altera o modelo de dados e o contrário, também se aplica.  Para que nossa view altere o nosso modelo, é necessário utilizar uma diretiva chamada v-model.
+
+V-model = responsável pelo two-way data binding. O v-model também altera a propriedade value, em nosso campo de texto.
