@@ -9,3 +9,8 @@ One-way data binding = Utilização de modelo de dados na view. Em uma linguagem
 Two-way data binging = Significa que a view altera o modelo de dados e o contrário, também se aplica.  Para que nossa view altere o nosso modelo, é necessário utilizar uma diretiva chamada v-model.
 
 V-model = responsável pelo two-way data binding. O v-model também altera a propriedade value, em nosso campo de texto.
+
+V-on = Diveritca que aceita eventos do javascritp. Pode utilizar das seguintes formas:
+v-on:click="nomeFuncao" ou @click="nomeFuncao"
+
+Filters = Através do filtro podemos criar uma lógica e passar informações. O filtro, por sua vez, devolverá um resultado, que em nosso caso é saldo.

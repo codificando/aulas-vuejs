@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>vue2</title>
+    <title>vue2</title> 	
   </head>
   <body>
     <div id="app" class="container">
@@ -12,11 +12,7 @@
     		<table class="table table-striped">
     			<thead>
     				<tr>
-    					<th>Time</th>
-    					<th>Pontos</th>
-    					<th>Gols Marcados</th>
-    					<th>Gols Sofridos</th>
-    					<th>Saldo</th>
+    					<th v-for="coluna in colunas">{{coluna | uppCase}}</th>
     				</tr>
     			</thead>
     			<tbody>
@@ -28,7 +24,7 @@
     					<td>{{time.pontos}}</td>
     					<td>{{time.gols_marcados}}</td>
     					<td>{{time.gols_sofridos}}</td>
-    					<td>{{time.saldo}}</td>
+    					<td>{{time | saldo}}</td>
     				</tr>
     			</tbody>
     		</table>
