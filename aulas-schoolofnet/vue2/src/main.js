@@ -24,7 +24,7 @@ new Vue({
         new Time('São Paulo', require('./assets/sao_paulo_60x60.png')),
         new Time('Cruzeiro', require('./assets/cruzeiro_60x60.png')),
         new Time('Sport', require('./assets/sport_60x60.png')),
-        new Time('Coritiba', require('./assets/coritiba_60x60.png')),
+        new Time('Curitiba', require('./assets/coritiba_60x60.png')),
         new Time('Internacional', require('./assets/internacional_60x60.png')),
         new Time('Vitória', require('./assets/vitoria_60x60.png')),
         new Time('Figueirense', require('./assets/figueirense_60x60.png')),
@@ -32,26 +32,24 @@ new Vue({
         new Time('América-MG', require('./assets/america_mg_60x60.png')),
   	],
   	novoJogo: {
-  		casa: {
-  			time: null,
-  			gols: 0
-  		},
-  		fora: {
-  			time: null,
-  			gols: 0
-  		}
-  	},
-  	//Método que incial do clico de vida do VUE
-  	created() {
-  		let indexCasa = Math.floor(Math.random() * 20),
-  			indexFora = Math.floor(Math.random() * 20);
+	    casa: {
+	        time: null,
+	        gols: 0
+	    },
+	    fora: {
+	        time: null,
+	        gols: 0
+		},
+	}
+  },	
+  created: function() {
+  	let indexCasa = Math.floor(Math.random() * 20),
+        indexFora = Math.floor(Math.random() * 20);
 
-  		//Inicializaando 
-  		this.novoJogo.casa.time = this.times['indexCasa'];
-  		this.novoJogo.casa.gols = 0;
-  		this.novoJogo.fora.time = this.times['indexFora'];
-  		this.novoJogo.fora.gols = 0;
-  	}
+  	//Inicializando 
+  	this.novoJogo.casa.time = this.times[indexCasa];
+  	this.novoJogo.casa.gols = 0;
+  	this.novoJogo.fora.time = this.times[indexFora];
+  	this.novoJogo.fora.gols = 0;
   }
-  // render: h => h(App)
 })
