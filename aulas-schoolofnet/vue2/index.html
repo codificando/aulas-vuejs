@@ -36,7 +36,6 @@
     	<div class="row">
 		    <form class="form-inline">
 		        <div class="form-group">
-		        	Gols - {{ novoJogo.casa.gols }}
 		            <input type="text" class="form-control" v-model="novoJogo.casa.gols">
 		            <label class="control-label">
 		            	{{ novoJogo.casa.time.nome }}
@@ -50,9 +49,9 @@
 		            	{{ novoJogo.fora.time.nome }}
 		            </label>
 		            <input type="text" class="form-control" v-model="novoJogo.fora.gols">
-		            Gols - {{ novoJogo.fora.gols }}
 		        </div>
-		        <button type="button" class="btn btn-primary">Fim de jogo</button>
+		        <br/><br/>
+		        <button type="button" class="btn btn-primary" @click="fimJogo">Fim de jogo</button>
 		    </form>
 		</div>
 		<br/>
