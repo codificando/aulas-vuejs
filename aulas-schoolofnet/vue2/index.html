@@ -14,11 +14,13 @@
 	    		<table class="table table-striped">
 	    			<thead>
 	    				<tr>
-	    					<th v-for="coluna in colunas">{{coluna | uppCase}}</th>
+	    					<th v-for="coluna in colunas">
+	    						<a href="#" @click.prevent="sortBy(coluna)">{{coluna | uppCase}}</a>
+	    					</th>
 	    				</tr>
 	    			</thead>
 	    			<tbody>
-	    				<tr v-for="time in times">
+	    				<tr v-for="time in timesFiltered">
 	    					<td>
 	    						<img :src="time.escudo" style="height: 30px; width: 30px" />
 	    						<strong>{{time.nome}}</strong>

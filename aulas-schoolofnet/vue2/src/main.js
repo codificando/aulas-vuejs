@@ -1,7 +1,6 @@
 import Vue from 'vue'
-// import App from './App.vue'
-
 import {Time} from './time';
+import _ from 'lodash'; 
 
 require('style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css');
 require('bootstrap');
@@ -9,6 +8,10 @@ require('bootstrap');
 let meuVue = new Vue({
   el: '#app',
   data: {
+  	order: {
+  		keys: ['pontos', 'gols_marcados', 'gols_sofridos'],
+  		sort: ['desc', 'desc', 'asc']
+  	},
   	colunas: ['nome', 'pontos', 'gols marcados', 'gols sofridos', 'saldo'],
   	times: [
   		new Time('Palmeiras', require('./assets/palmeiras_60x60.png')),
@@ -44,9 +47,6 @@ let meuVue = new Vue({
 	},
 	view: "tabela"
   },	
-  //Um dos métodos do clico de vida do Vue
-  created() {
-  },
   methods: {
   	fimJogo() {
   		let timeAdversario = this.novoJogo.fora.time;
@@ -70,6 +70,15 @@ let meuVue = new Vue({
   	},
   	showView(view) {
   		this.view = view;
+  	},
+  	sortBy(coluna){
+        this.order.keys = coluna;
+        this.order.sort = this.order.sort == 'desc' ? 'asc': 'desc';
+    }
+  },
+  computed: {
+  	timesFiltered() {
+  		return _.orderBy(this.times, this.order.keys, this.order.sort);
   	}
   },
   filters: {
