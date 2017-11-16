@@ -42,18 +42,10 @@ let meuVue = new Vue({
 	        gols: 0
 		},
 	},
-	teste: 0
+	view: "tabela"
   },	
   //Um dos métodos do clico de vida do Vue
   created() {
-  	let indexCasa = Math.floor(Math.random() * 20),
-        indexFora = Math.floor(Math.random() * 20);
-
-  	//Inicializando 
-  	this.novoJogo.casa.time = this.times[indexCasa];
-  	this.novoJogo.casa.gols = 0;
-  	this.novoJogo.fora.time = this.times[indexFora];
-  	this.novoJogo.fora.gols = 0;
   },
   methods: {
   	fimJogo() {
@@ -62,6 +54,22 @@ let meuVue = new Vue({
   		let golsAdversario = +this.novoJogo.fora.gols;
 
         this.novoJogo.casa.time.fimJogo(timeAdversario, gols, golsAdversario);
+        this.showView("tabela"); 
+  	},
+  	createNovoJogo() {	
+	  	let indexCasa = Math.floor(Math.random() * 20),
+	        indexFora = Math.floor(Math.random() * 20);
+
+	  	//Inicializando 
+	  	this.novoJogo.casa.time = this.times[indexCasa];
+	  	this.novoJogo.casa.gols = 0;
+	  	this.novoJogo.fora.time = this.times[indexFora];
+	  	this.novoJogo.fora.gols = 0;
+
+	  	this.showView("novoJogo"); 
+  	},
+  	showView(view) {
+  		this.view = view;
   	}
   },
   filters: {
