@@ -11,6 +11,10 @@
     		<a href="#" class="btn btn-primary" @click.prevent="createNovoJogo">Novo Jogo</a>
     		<br/><br/>
     		<div v-if="view == 'tabela'">
+    			<br/>
+    			<label>Buscar por:</label>
+			    <input type="text" class="form-control" v-model="filter">
+			    <br/><br/>
 	    		<table class="table table-striped">
 	    			<thead>
 	    				<tr>

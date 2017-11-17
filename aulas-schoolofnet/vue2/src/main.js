@@ -13,6 +13,7 @@ let meuVue = new Vue({
   		sort: ['desc', 'desc', 'asc']
   	},
   	colunas: ['nome', 'pontos', 'gols marcados', 'gols sofridos', 'saldo'],
+  	filter: '',
   	times: [
   		new Time('Palmeiras', require('./assets/palmeiras_60x60.png')),
         new Time('Flamengo', require('./assets/flamengo_60x60.png')),
@@ -78,7 +79,11 @@ let meuVue = new Vue({
   },
   computed: {
   	timesFiltered() {
-  		return _.orderBy(this.times, this.order.keys, this.order.sort);
+  		let colecao = _.orderBy(this.times, this.order.keys, this.order.sort);
+
+        return _.filter(colecao , item => {
+            return item.nome.indexOf(this.filter) >= 0;
+        })
   	}
   },
   filters: {
