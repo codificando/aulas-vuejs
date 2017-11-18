@@ -14,3 +14,7 @@ V-on = Diveritca que aceita eventos do javascritp. Pode utilizar das seguintes f
 v-on:click="nomeFuncao" ou @click="nomeFuncao"
 
 Filters = Através do filtro podemos criar uma lógica e passar informações. O filtro, por sua vez, devolverá um resultado, que em nosso caso é saldo.
+
+lodash = biblioteca que consegue manipular array, strings, etc
+
+computed = Propriedade que permite criar métodos 
