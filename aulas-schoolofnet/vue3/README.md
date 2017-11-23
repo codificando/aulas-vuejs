@@ -1,4 +1,4 @@
-# vue-aulas
+# vue3
 
 > A Vue.js project
 
