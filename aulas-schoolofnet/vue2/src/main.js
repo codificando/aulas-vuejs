@@ -5,6 +5,8 @@ import _ from 'lodash';
 require('style-loader!css-loader!bootstrap/dist/css/bootstrap.min.css');
 require('bootstrap');
 
+require('./assets/scss/main.scss');
+
 let meuVue = new Vue({
   el: '#app',
   data: {
@@ -15,26 +17,26 @@ let meuVue = new Vue({
   	colunas: ['nome', 'pontos', 'gols marcados', 'gols sofridos', 'saldo'],
   	filter: '',
   	times: [
-  		new Time('Palmeiras', require('./assets/palmeiras_60x60.png')),
-        new Time('Flamengo', require('./assets/flamengo_60x60.png')),
-        new Time('Atlético-MG', require('./assets/atletico_mg_60x60.png')),
-        new Time('Santos', require('./assets/santos_60x60.png')),
-        new Time('Botafogo', require('./assets/botafogo_60x60.png')),
-        new Time('Atlético-PR', require('./assets/atletico-pr_60x60.png')),
-        new Time('Corinthians', require('./assets/corinthians_60x60.png')),
-        new Time('Grêmio', require('./assets/gremio_60x60.png')),
-        new Time('Fluminense', require('./assets/fluminense_60x60.png')),
-        new Time('Ponte Preta', require('./assets/ponte_preta_60x60.png')),
-        new Time('Chapecoense', require('./assets/chapecoense_60x60.png')),
-        new Time('São Paulo', require('./assets/sao_paulo_60x60.png')),
-        new Time('Cruzeiro', require('./assets/cruzeiro_60x60.png')),
-        new Time('Sport', require('./assets/sport_60x60.png')),
-        new Time('Curitiba', require('./assets/coritiba_60x60.png')),
-        new Time('Internacional', require('./assets/internacional_60x60.png')),
-        new Time('Vitória', require('./assets/vitoria_60x60.png')),
-        new Time('Figueirense', require('./assets/figueirense_60x60.png')),
-        new Time('Santa Cruz', require('./assets/santa_cruz_60x60.png')),
-        new Time('América-MG', require('./assets/america_mg_60x60.png')),
+  		new Time('Palmeiras', require('./assets/img/palmeiras_60x60.png')),
+        new Time('Flamengo', require('./assets/img/flamengo_60x60.png')),
+        new Time('Atlético-MG', require('./assets/img/atletico_mg_60x60.png')),
+        new Time('Santos', require('./assets/img/santos_60x60.png')),
+        new Time('Botafogo', require('./assets/img/botafogo_60x60.png')),
+        new Time('Atlético-PR', require('./assets/img/atletico-pr_60x60.png')),
+        new Time('Corinthians', require('./assets/img/corinthians_60x60.png')),
+        new Time('Grêmio', require('./assets/img/gremio_60x60.png')),
+        new Time('Fluminense', require('./assets/img/fluminense_60x60.png')),
+        new Time('Ponte Preta', require('./assets/img/ponte_preta_60x60.png')),
+        new Time('Chapecoense', require('./assets/img/chapecoense_60x60.png')),
+        new Time('São Paulo', require('./assets/img/sao_paulo_60x60.png')),
+        new Time('Cruzeiro', require('./assets/img/cruzeiro_60x60.png')),
+        new Time('Sport', require('./assets/img/sport_60x60.png')),
+        new Time('Curitiba', require('./assets/img/coritiba_60x60.png')),
+        new Time('Internacional', require('./assets/img/internacional_60x60.png')),
+        new Time('Vitória', require('./assets/img/vitoria_60x60.png')),
+        new Time('Figueirense', require('./assets/img/figueirense_60x60.png')),
+        new Time('Santa Cruz', require('./assets/img/santa_cruz_60x60.png')),
+        new Time('América-MG', require('./assets/img/america_mg_60x60.png')),
   	],
   	novoJogo: {
 	    casa: {
