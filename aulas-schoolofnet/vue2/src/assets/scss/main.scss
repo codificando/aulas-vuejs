@@ -1,5 +1,4 @@
-@import '_variables';
-
-body {
-  background: $base-color;
-}
+/*COMPONENTS*/
+	@import '_modules';
+	@import '_layout';
+/* /COMPONENTS*/
